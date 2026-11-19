@@ -1,4 +1,4 @@
-# FB Page Unfollow 🚀
+# FB Page Unfollow (Bulk) 🚀
 
 > A clean, lightweight Chrome extension to scan and bulk-unfollow Facebook pages at a safe, adjustable pace.
 
