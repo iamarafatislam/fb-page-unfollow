@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "FB Page Unfollower",
+  "name": "FB Page Unfollow",
   "version": "1.0.0",
   "description": "Scan and bulk unfollow Facebook pages at a safe adjustable pace.",
   "action": {
-    "default_title": "Open FB Page Unfollower"
+    "default_title": "Open FB Page Unfollow"
   },
   "background": {
     "service_worker": "background.js"
