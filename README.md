@@ -19,27 +19,24 @@
 
 ---
 
-## 📥 Installation Guide
+## 📥 Download & Installation
 
-Since this is an open-source extension, you can install it directly into Google Chrome without the Chrome Web Store:
+### Option 1: Quick Download (Recommended)
+1. **[👉 Download fb-page-unfollow.zip](https://github.com/iamarafatislam/fb-page-unfollow/raw/main/fb-page-unfollow.zip)** directly.
+2. Extract the downloaded ZIP folder to your PC.
 
-1. **Download the code:**
-   - Click the green **Code** button at the top right of this repository and select **Download ZIP** (or clone the repository using `git clone`).
-   - Extract the ZIP file anywhere on your computer.
+### Option 2: Clone or Download from GitHub
+- Click the green **`<> Code`** button at the top of this repository and choose **Download ZIP**.
+- Extract the ZIP.
 
-2. **Open Extensions in Chrome:**
-   - In Google Chrome, navigate to `chrome://extensions/` (or go to `Settings` > `Extensions`).
+---
 
-3. **Enable Developer Mode:**
-   - Turn on the **Developer mode** toggle in the top-right corner.
-
-4. **Load the Extension:**
-   - Click the **"Load unpacked"** button in the top-left corner.
-   - Select the folder containing `manifest.json`.
-
-5. **Start Unfollowing:**
-   - Make sure you are logged into [Facebook](https://www.facebook.com/) in any browser tab.
-   - Click the **FB Page Unfollower** puzzle icon in your Chrome toolbar to open the side panel.
+### How to Load into Chrome:
+1. Open Google Chrome and go to `chrome://extensions/`
+2. Enable the **"Developer mode"** toggle in the top-right corner.
+3. Click the **"Load unpacked"** button in the top-left corner.
+4. Select the extracted folder (the one containing `manifest.json`).
+5. Open [Facebook](https://www.facebook.com/) in any tab, then click the extension icon in your toolbar to start!
 
 ---
 
