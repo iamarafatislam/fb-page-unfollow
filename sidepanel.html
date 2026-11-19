@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unfollow Facebook Pages Fast</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div id="root">
+    <div class="app">
+      <div class="dashboard">
+        <!-- Top Bar -->
+        <header class="topbar">
+          <div class="topbar-head">
+            <div class="brand">
+              <div class="brand-mark">
+                <img src="icons/icon-32.png" alt="Logo">
+              </div>
+              <div class="brand-text">
+                <span class="brand-kicker">Facebook Tool</span>
+                <h1 class="brand-title">Unfollow Pages Fast</h1>
+              </div>
+            </div>
+            <div class="topbar-actions">
+              <button id="refreshBtn" class="icon-btn" title="Reload pages">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Status Line -->
+          <div class="status">
+            <span id="statusDot" class="dot"></span>
+            <span id="statusText" class="truncate">Checking Facebook session...</span>
+          </div>
+        </header>
+
+        <!-- View 1: List View -->
+        <div id="listView" class="view active">
+          <!-- Toolbar (Search, Filter, Pacing) -->
+          <div class="toolbar">
+            <div class="search">
+              <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="searchInput" placeholder="Search followed pages..." spellcheck="false" autocomplete="off">
+              <button id="clearSearchBtn" class="clear hidden" title="Clear search">×</button>
+            </div>
+
+            <div class="toolbar-row">
+              <div class="count-chip">
+                <span id="filteredCount">0</span>
+                <span class="sep">/</span>
+                <span id="totalCount">0</span>
+                <span>pages</span>
+              </div>
+
+              <div class="toolbar-controls">
+                <div class="speed-picker">
+                  <label for="speedSelect" class="speed-label">Speed:</label>
+                  <select id="speedSelect" class="speed-dropdown">
+                    <option value="1200">⚡ Ultra (1.2s)</option>
+                    <option value="2000" selected>🚀 Fast (2.0s)</option>
+                    <option value="3500">🚶 Normal (3.5s)</option>
+                    <option value="5000">🐢 Safe (5.0s)</option>
+                  </select>
+                </div>
+                <button id="selectAllBtn" class="selectall">Select All</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loading Skeleton -->
+          <div id="skeletonLoading" class="skeleton-list">
+            <div class="sk-row"><div class="sk sk-avatar"></div><div class="sk-info"><div class="sk sk-line-1"></div><div class="sk sk-line-2"></div></div></div>
+            <div class="sk-row"><div class="sk sk-avatar"></div><div class="sk-info"><div class="sk-line-1 sk"></div><div class="sk-line-2 sk"></div></div></div>
+            <div class="sk-row"><div class="sk sk-avatar"></div><div class="sk-info"><div class="sk-line-1 sk"></div><div class="sk-line-2 sk"></div></div></div>
+          </div>
+
+          <!-- Empty State -->
+          <div id="emptyState" class="no-results hidden">
+            <div class="no-results-glyph">📄</div>
+            <p id="emptyStateMsg">No Facebook pages found.</p>
+          </div>
+
+          <!-- Main Scrollable List -->
+          <div class="list-scroll">
+            <ul id="pageList" class="friend-list"></ul>
+          </div>
+
+          <!-- Bottom Sticky Action Bar -->
+          <div id="actionBar" class="actionbar">
+            <div class="bar-inner">
+              <div class="sel-count">
+                <b id="selCountNumber">0</b>
+                <span class="sel-of">selected</span>
+              </div>
+              <button id="unfollowBtn" class="btn btn-danger btn-block">
+                Unfollow Selected
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 2: Progress Screen -->
+        <div id="progressView" class="view">
+          <div class="progress-wrap">
+            <div class="section-head">
+              <h2 id="progressTitle" class="section-title">Unfollowing pages...</h2>
+              <div class="prog-stats">
+                <span id="progressPercent" class="prog-pct">0%</span>
+                <span id="progressEta" class="prog-eta">ETA ~0s</span>
+              </div>
+            </div>
+
+            <div class="progress-bar-bg">
+              <div id="progressBarFill" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+
+            <div class="now-processing">
+              <div class="spin"></div>
+              <div class="np-info">
+                <div class="np-label">Now Unfollowing</div>
+                <div id="npName" class="np-name">—</div>
+              </div>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat-tile ok">
+                <div id="statOk" class="stat-num">0</div>
+                <div class="stat-lbl">Unfollowed</div>
+              </div>
+              <div class="stat-tile fail">
+                <div id="statFail" class="stat-num">0</div>
+                <div class="stat-lbl">Errors / Skipped</div>
+              </div>
+            </div>
+
+            <button id="stopBtn" class="btn btn-ghost btn-block">
+              Stop Unfollowing
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
